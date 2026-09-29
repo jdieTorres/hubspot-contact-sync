@@ -1,0 +1,9 @@
+email,first_name,last_name,phone,company,city,language
+ana.perez@example.com,ANA MARÍA,pérez,+57 (300) 123-4567,Acme Legal,Bogotá,Español
+john.smith@example.com,John,Smith,+1 212 555 0100,Hudson Partners,New York,English
+  LAURA.GOMEZ@Example.com ,laura,gómez,3109876543,,Medellín,es
+carlos.rojas@example.com,Carlos,Rojas,,Rojas & Asociados,Cali,spanish
+,Sin,Email,3001234567,,Bogotá,es
+correo-invalido,Mal,Formato,,,,
+ana.perez@example.com,,,,,Bogotá D.C.,
+emily.chen@example.com,Emily,Chen,+1 (646) 555-0199,Chen Law Group,Brooklyn,en

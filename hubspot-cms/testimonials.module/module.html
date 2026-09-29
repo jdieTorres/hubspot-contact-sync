@@ -1,0 +1,36 @@
+{#
+  Testimonials module
+  - Repeater group: marketing adds/removes/reorders testimonials without code.
+  - Semantic markup (figure/blockquote/figcaption) and escaped text.
+  - Explicit image dimensions + lazy loading to protect CLS/LCP (Core Web Vitals).
+  - module.css is loaded automatically by HubSpot, only on pages that use the module.
+#}
+
+<section class="testimonials" aria-labelledby="testimonials-{{ name }}">
+  {% if module.heading %}
+    <h2 id="testimonials-{{ name }}" class="testimonials__heading">{{ module.heading|escape }}</h2>
+  {% endif %}
+
+  <div class="testimonials__grid testimonials__grid--cols-{{ module.columns }}">
+    {% for item in module.testimonials %}
+      <figure class="testimonial">
+        {% if item.photo.src %}
+          <img class="testimonial__photo"
+               src="{{ item.photo.src }}"
+               alt="{{ item.photo.alt|escape_attr }}"
+               width="{{ item.photo.width or 80 }}"
+               height="{{ item.photo.height or 80 }}"
+               loading="lazy"
+               decoding="async">
+        {% endif %}
+        <blockquote class="testimonial__quote">
+          <p>{{ item.quote|escape }}</p>
+        </blockquote>
+        <figcaption class="testimonial__author">
+          <strong class="testimonial__name">{{ item.name|escape }}</strong>
+          {% if item.role %}<span class="testimonial__role">{{ item.role|escape }}</span>{% endif %}
+        </figcaption>
+      </figure>
+    {% endfor %}
+  </div>
+</section>

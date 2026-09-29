@@ -1,0 +1,11 @@
+{
+  "label": "Testimonios",
+  "global": false,
+  "is_available_for_new_content": true,
+  "host_template_types": ["PAGE", "LANDING_PAGE", "BLOG_POST"],
+  "css_assets": [],
+  "js_assets": [],
+  "other_assets": [],
+  "smart_type": "NOT_SMART",
+  "tags": []
+}

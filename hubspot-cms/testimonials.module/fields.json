@@ -1,0 +1,46 @@
+[
+  {
+    "name": "heading",
+    "label": "Título de la sección",
+    "type": "text",
+    "default": "Lo que dicen nuestros clientes"
+  },
+  {
+    "name": "testimonials",
+    "label": "Testimonios",
+    "type": "group",
+    "occurrence": { "min": 1, "max": 12, "default": 3, "sorting_label_field": "testimonials.name" },
+    "children": [
+      {
+        "name": "photo",
+        "label": "Foto",
+        "type": "image",
+        "responsive": true,
+        "resizable": false,
+        "default": { "src": "", "alt": "", "loading": "lazy" }
+      },
+      { "name": "name", "label": "Nombre", "type": "text", "required": true, "default": "Nombre del cliente" },
+      { "name": "role", "label": "Cargo / empresa", "type": "text", "default": "" },
+      {
+        "name": "quote",
+        "label": "Testimonio",
+        "type": "textarea",
+        "required": true,
+        "default": "Escribe aquí el testimonio."
+      }
+    ],
+    "default": [
+      { "name": "Cliente 1", "role": "", "quote": "Escribe aquí el testimonio." },
+      { "name": "Cliente 2", "role": "", "quote": "Escribe aquí el testimonio." },
+      { "name": "Cliente 3", "role": "", "quote": "Escribe aquí el testimonio." }
+    ]
+  },
+  {
+    "name": "columns",
+    "label": "Columnas en escritorio",
+    "type": "choice",
+    "display": "radio",
+    "choices": [["2", "2 columnas"], ["3", "3 columnas"]],
+    "default": "3"
+  }
+]
